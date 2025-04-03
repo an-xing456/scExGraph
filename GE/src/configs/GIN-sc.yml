@@ -1,0 +1,33 @@
+data_config:
+  splits:
+    train: 0.8
+    valid: 0.1
+    test: 0.1
+  batch_size: 128
+
+model_config:
+  use_edge_attr: false
+  model_name: GIN
+  hidden_size: 64
+  n_layers: 2
+  dropout_p: 0.3
+
+shared_config:
+  learn_edge_att: false
+  precision_k: 10
+  num_viz_samples: 8
+  viz_interval: 10
+  viz_norm_att: true
+  extractor_dropout_p: 0.5
+
+GE_config:
+  method_name: 'GE'
+  pred_loss_coef: 1
+  info_loss_coef: 1
+  epochs: 60
+  lr: 1.0e-3
+
+  fix_r: false
+  decay_interval: 10 #The interval between cycles in which the r value is updated.
+  decay_r: 0.1      #The amount that r decreases with each update.
+  final_r: 0.7      #The minimum or final stable value of r.
