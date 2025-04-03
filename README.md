@@ -24,5 +24,3 @@
 * pandas==1.1.5
 * scanpy==1.7.2
 
-
-# scExGraph
